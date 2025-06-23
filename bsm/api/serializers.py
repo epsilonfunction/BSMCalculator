@@ -31,6 +31,7 @@ class BSMCalculationSerializer(serializers.ModelSerializer):
             K=self.validated_data['K'],
             t=self.validated_data['t'],
             r=self.validated_data['r'],
+            q=self.validated_data['q'],
             sigma=self.validated_data['sigma']
         )
         print('ending calculate')
