@@ -26,8 +26,8 @@ class BlackscholesView(APIView):
     def post(self, request):
         serializer = BSMCalculationSerializer(data=request.data)
         if serializer.is_valid():
-            ressults= serializer.calculate()
-            return Response(ressults, status=201)
+            results = BSMCalculationSerializer.calculate(serializer.validated_data)
+            return Response(results, status=201)
         return Response(serializer.errors, status=400)
 
 

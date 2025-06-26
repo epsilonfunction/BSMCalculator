@@ -24,18 +24,18 @@ class BSMCalculationSerializer(serializers.ModelSerializer):
             'sigma'
         ]
     
-    def calculate(self):
+    @staticmethod
+    def calculate(validated_data):
         print('starting calculate')
         bs = blackscholes(
-            S=self.validated_data['S'],
-            K=self.validated_data['K'],
-            t=self.validated_data['t'],
-            r=self.validated_data['r'],
-            q=self.validated_data['q'],
-            sigma=self.validated_data['sigma']
+            S=validated_data['S'],
+            K=validated_data['K'],
+            t=validated_data['t'],
+            r=validated_data['r'],
+            q=validated_data['q'],
+            sigma=validated_data['sigma']
         )
         print('ending calculate')
-
 
         return {
             'call_price': bs.Call(),
