@@ -1,0 +1,18 @@
+[project]
+name = "BSMCalculator"
+version = "0.1.0"
+description = "A Calculator for Black-Scholes-Merton Model and Similar Models"
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "django>=5.2",
+    "django-filter>=25.1",
+    "djangorestframework>=3.16.0",
+    "ipykernel>=6.29.5",
+    "markdown>=3.8.2",
+    "numpy>=2.2.4",
+    "requests>=2.32.3",
+    "scipy>=1.15.2",
+    "uv>=0.6.14",
+]

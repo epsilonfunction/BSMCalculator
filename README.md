@@ -21,3 +21,15 @@ Either,
     curl -X POST {localserver}/api/calculate/ -H "Content-Type: application/json" -d '{"S": 100, "K": 100, "t": 1, "r": 0.05, "q": 0.02, "sigma": 0.2}'
 
 Or, use the [[api_tester.ipynb]]
+
+# A small help to using Docker
+Our API requires us to call the server and its port number. However Docker is often self enclosed.
+What we need to do:
+
+	````
+	docker run -d -p HOST_PORT:CONTAINER_PORT <container-name>
+	````
+
+For example,
+	
+	docker run -d -p 0.0.0.0:8080 django-latest 
