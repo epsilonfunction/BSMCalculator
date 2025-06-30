@@ -44,3 +44,5 @@ class BSMCalculationSerializer(serializers.ModelSerializer):
             'put_delta': bs.get_delta()[1],
             'gamma': bs.get_gamma()
         }
+
+# class B76Serializer(serializers.ModelSerializer):
